@@ -52,6 +52,9 @@ df_selection = df.query(
     "City == @city & Customer_type ==@customer_type & Gender == @gender & Payment == @product"
 )
 
+    df["Total"] = df["Total"].fillna(0)
+    df["Rating"] = df["Rating"].fillna(0)
+
 # ---- MAINPAGE ----
 st.title(":bar_chart: Sales Dashboard")
 st.markdown("##")

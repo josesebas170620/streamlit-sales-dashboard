@@ -43,12 +43,12 @@ gender = st.sidebar.multiselect(
 
 product = st.sidebar.multiselect(
     label = "Choose a Product line", 
-    options = df["Product line"].unique(),
-    default=df["Product line"].unique()
+    options = df["Payment"].unique(),
+    default=df["Payment"].unique()
 )
 
 df_selection = df.query(
-    "City == @city & Customer_type ==@customer_type & Gender == @gender & Product line == @product"
+    "City == @city & Customer_type ==@customer_type & Gender == @gender & Payment == @product"
 )
 
 # ---- MAINPAGE ----

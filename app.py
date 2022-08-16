@@ -17,7 +17,7 @@ def get_data_from_excel():
     )
     # Add 'hour' column to dataframe
     df["hour"] = pd.to_datetime(df["Time"], format="%H:%M:%S").dt.hour
-    df["city2"] = pd.to_numeric(df["City"], errors='coerce')
+    df["city2"] = pd.to_numeric(df["City"], errors='coerce').dt.city2
     return df
 
 df = get_data_from_excel()

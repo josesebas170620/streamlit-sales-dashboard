@@ -3,7 +3,7 @@ import plotly.express as px  # pip install plotly-express
 import streamlit as st  # pip install streamlit
 
 
-st.set_page_config(page_title="Reporte Pronósticos", page_icon=":bar_chart:", layout="wide")
+st.set_page_config(page_title="Sales Dashboard", page_icon=":bar_chart:", layout="wide")
 
 @st.cache
 def get_data_from_excel():

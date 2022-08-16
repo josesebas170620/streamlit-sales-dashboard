@@ -17,7 +17,7 @@ def get_data_from_excel():
     )
     # Add 'hour' column to dataframe
     df["hour"] = pd.to_datetime(df["Time"], format="%H:%M:%S").dt.hour
-    df["city2"] = pd.to_numeric(df["City"], errors='coerce').astype(int)
+    df["City"] = df["City"].fillna(0)
     return df
 
 df = get_data_from_excel()
@@ -26,8 +26,8 @@ df = get_data_from_excel()
 st.sidebar.header("Please Filter Here:")
 city = st.sidebar.multiselect(
     "Select the City:",
-    options = df["city2"].unique(),
-    default= df["city2"].unique()
+    options = df["City"].unique(),
+    default= df["City"].unique()
 )
 
 customer_type = st.sidebar.multiselect(

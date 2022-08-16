@@ -41,8 +41,8 @@ gender = st.sidebar.multiselect(
     default=df["Gender"].unique()
 )
 
-product = st.sidebar.selectbox(
-    label = "Choose a Gender", 
+product = st.sidebar.multiselect(
+    label = "Choose a Product line", 
     options = df["Product line"].unique(),
     default=df["Product line"].unique()
 )

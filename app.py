@@ -26,8 +26,8 @@ df = get_data_from_excel()
 st.sidebar.header("Please Filter Here:")
 city = st.sidebar.multiselect(
     "Select the City:",
-    options = df["City2"].unique(),
-    default= df["City2"].unique()
+    options = df["city2"].unique(),
+    default= df["city2"].unique()
 )
 
 customer_type = st.sidebar.multiselect(

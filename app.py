@@ -42,9 +42,8 @@ gender = st.sidebar.multiselect(
 )
 
 product = st.sidebar.multiselect(
-    label = "Choose a Product line", 
-    options = df["Payment"].unique(),
-    default=df["Payment"].unique()
+    label = "Choose a Payment", 
+    options = df["Payment"].unique()
 )
 
 df_selection = df.query(

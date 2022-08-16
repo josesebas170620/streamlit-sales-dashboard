@@ -48,7 +48,7 @@ product = st.sidebar.selectbox(
 )
 
 df_selection = df.query(
-    "City == @city & Customer_type ==@customer_type & Gender == @gender & Product = @product"
+    "City == @city & Customer_type ==@customer_type & Gender == @gender & Product == @product"
 )
 
 # ---- MAINPAGE ----

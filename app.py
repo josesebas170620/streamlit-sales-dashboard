@@ -41,11 +41,14 @@ gender = st.sidebar.multiselect(
     default=df["Gender"].unique()
 )
 
-
-continent = st.sidebar.selectbox(label = "Choose a Gender", options = df['Gender'].unique())
+product = st.sidebar.selectbox(
+    label = "Choose a Gender", 
+    options = df["Product line"].unique(),
+    default=df["Product line"].unique()
+)
 
 df_selection = df.query(
-    "City == @city & Customer_type ==@customer_type & Gender == @gender & Continent = @continent"
+    "City == @city & Customer_type ==@customer_type & Gender == @gender & Product = @product"
 )
 
 # ---- MAINPAGE ----
